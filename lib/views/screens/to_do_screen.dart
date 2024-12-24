@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:todo_list_app/view_model/navigation_bar_view_model.dart';
 import 'package:todo_list_app/view_model/task_view_model.dart'; // لإدارة الحالة
 
 class ToDoListScreen extends StatelessWidget {
   final TextEditingController _taskController = TextEditingController();
+
+  ToDoListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     final taskViewModel = Provider.of<TaskViewModel>(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('To-Do List'),
-      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
